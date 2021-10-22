@@ -1,0 +1,19 @@
+/* #home-content {
+    height: 100vh;
+} */
+
+header {
+    height: 7vh;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 83vh;
+    background-color: grey;
+}
+
+footer {
+    height: 10vh;
+    background-color:#212529;
+}
