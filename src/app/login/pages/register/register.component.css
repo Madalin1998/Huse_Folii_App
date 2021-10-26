@@ -1,0 +1,8 @@
+.register {
+    min-height: 100vh;
+    padding-top: 25vh;
+}
+
+.register-box {
+    border-radius: 15px;
+}

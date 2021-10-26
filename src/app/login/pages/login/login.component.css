@@ -1,0 +1,8 @@
+.login {
+    min-height: 100vh;
+    padding-top: 25vh;
+}
+
+.login-box {
+    border-radius: 15px;
+}

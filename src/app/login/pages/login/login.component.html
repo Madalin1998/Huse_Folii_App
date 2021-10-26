@@ -1,1 +1,27 @@
-<p>login page works!</p>
+<div class="container-fluid login">
+    <div class="container-fluid border border-3 login-box w-25 p-3 d-flex justify-content-center">
+        <form>
+            <div class="container-fluid d-flex justify-content-center p-3">
+                <h3>Login</h3>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="container-fluid d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="container-fluid d-flex justify-content-center mt-3">
+            <p class="pt-2">Don't have an account?</p>
+            <a>
+                <button class="btn btn-primary ms-3" routerLink="../login/register">Register</button>
+            </a>
+    </div>
+</div>
