@@ -5,4 +5,5 @@
 
 .login-box {
     border-radius: 15px;
+    width: fit-content;
 }
