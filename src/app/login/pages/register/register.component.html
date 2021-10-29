@@ -6,7 +6,8 @@
             </div>
             <div class="mb-3">
                 <label for="f-name" class="form-label">First name</label>
-                <input type="text" class="form-control" formControlName="firstName" id="f-name" [ngClass]="{ 'is-invalid': regForm.controls.firstName.touched }" required>
+                <input type="text" class="form-control" formControlName="firstName" id="f-name" [ngClass]="{ 'is-invalid': (regForm.controls.firstName.touched && regForm.controls.firstName.errors)
+                }" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -16,7 +17,8 @@
             </div>
             <div class="mb-3">
                 <label for="l-name" class="form-label">Last name</label>
-                <input type="text" class="form-control" formControlName="lastName" id="l-name" required>
+                <input type="text" class="form-control" formControlName="lastName" id="l-name" [ngClass]="{ 'is-invalid': (regForm.controls.lastName.touched && regForm.controls.lastName.errors)
+            }" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -27,7 +29,8 @@
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" class="form-control" formControlName="email" id="email" aria-describedby="emailHelp"
-                    required>
+                    [ngClass]="{ 'is-invalid': (regForm.controls.email.touched && regForm.controls.email.errors)
+            }" required>
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 <div class="valid-feedback">
                     Looks good!
@@ -38,7 +41,16 @@
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" formControlName="password" id="password" required>
+                <input type="password" class="form-control" formControlName="password" id="password" [ngClass]="{ 'is-invalid': (regForm.controls.password.touched && regForm.controls.password.errors)
+            }" required>
+                <div class="container-fluid"
+                    *ngIf="regForm.controls.password.touched && regForm.controls.password.errors">
+                    <small class="text-muted d-block p-0 m-0">At least one lower case English letter.</small>
+                    <small class="text-muted d-block p-0 m-0">At least one digit.</small>
+                    <small class="text-muted d-block p-0 m-0">At least one special character.</small>
+                    <small class="text-muted d-block p-0 m-0">Minimum eight in length.</small>
+                    <small class="text-muted d-block p-0 m-0">At least one upper case English letter.</small>
+                </div>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -47,8 +59,24 @@
                 </div>
             </div>
             <div class="container-fluid d-flex justify-content-center">
-                <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+                <button type="submit" [ngClass]="{'disabled': regForm.status === 'INVALID'}" class="btn btn-primary"
+                    id="submit-btn">Submit</button>
             </div>
         </form>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+        </symbol>
+    </svg>
+    <div class="alert alert-success d-flex align-items-center mt-3" *ngIf="this.f_Name != '' && this.l_Name != ''"
+        role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+            <use xlink:href="#check-circle-fill" />
+        </svg>
+        <div>
+            Wellcome {{f_Name}} {{l_Name}}!
+        </div>
     </div>
 </div>

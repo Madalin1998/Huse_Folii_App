@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,13 +10,20 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   public regForm: FormGroup;
+  public f_Name = '';
+  public l_Name = '';
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.regForm = this.formBuilder.group({
       firstName: ['', Validators.compose([Validators.required])],
       lastName: ['', Validators.compose([Validators.required])],
       email: ['', Validators.compose([Validators.required, Validators.email])],
-      password: ['', Validators.compose([Validators.required, Validators.minLength(6),Validators.maxLength(40)])]
+      password: ['', Validators.compose([
+        Validators.required,
+        Validators.minLength(6),
+        Validators.maxLength(40),
+        Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')
+      ])]
     });
   }
 
@@ -23,23 +31,11 @@ export class RegisterComponent implements OnInit {
   }
 
   saveUser() {
-    // if (this.regForm.controls.firstName.value === '') {
-    //   var f_name = document.getElementById("f-name");
-    //   f_name?.classList.add("is-invalid");
-    // }
-    // if (this.regForm.controls.lastName.value === '') {
-    //   var l_name = document.getElementById("l-name");
-    //   l_name?.classList.add("is-invalid");
-    // }
-    // if (this.regForm.controls.email.value === '') {
-    //   var email = document.getElementById("email");
-    //   email?.classList.add("is-invalid");
-    // }
-    // if (this.regForm.controls.password.value === '') {
-    //   var password = document.getElementById("password");
-    //   password?.classList.add("is-invalid");
-    // }
-    console.log(this.regForm);
+    this.f_Name = this.regForm.controls.firstName.value;
+    this.l_Name = this.regForm.controls.lastName.value;
+    localStorage.setItem('emmail', this.regForm.controls.email.value);
+    localStorage.setItem('password', this.regForm.controls.password.value);
+    this.router.navigate(['/home']);
   }
 
 }

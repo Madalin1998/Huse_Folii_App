@@ -1,13 +1,21 @@
 .register {
     min-height: 100vh;
-    padding-top: 25vh;
+    padding-top: 15vh;
 }
 
 .register-box {
     border-radius: 15px;
-    width: fit-content;
+    width: 25vw;
 }
 
-/* .is-invalid {
-    border: 1px solid red;
-} */
+@media only screen and (max-width: 600px) { 
+    .register-box {
+        width: 80vw;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) { 
+    .register-box {
+        width: 50vw;
+    }
+}
