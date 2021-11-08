@@ -1,15 +1,35 @@
 <div id="home-content">
 
-    <header>
-        <navbar></navbar>
-    </header>
-    
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-    
-    <footer>
-        <foot></foot>
-    </footer>
-    
-  </div>
+  <header>
+
+    <navbar></navbar>
+
+  </header>
+
+  <main>
+
+    <div class="row w-100">
+
+      <div class="col-2 border-end border-3 side-panel container-fluid">
+
+        <app-side-panel></app-side-panel>
+
+      </div>
+
+      <div class="col-10 container-fluid product-panel d-flex justify-content-center pb-5">
+
+        <router-outlet></router-outlet>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+
+    <foot></foot>
+
+  </footer>
+
+</div>

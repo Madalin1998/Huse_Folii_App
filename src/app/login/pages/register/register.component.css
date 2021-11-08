@@ -1,6 +1,6 @@
 .register {
     min-height: 100vh;
-    padding-top: 15vh;
+    padding-top: 8vh;
 }
 
 .register-box {
@@ -8,6 +8,22 @@
     width: 25vw;
 }
 
+.home-b {
+    cursor: pointer;
+}
+
+.login-b {
+    cursor: pointer;
+}
+
+.home-b:hover {
+    color: cornflowerblue;
+}
+
+.login-b:hover {
+    color: cornflowerblue;
+}
+ 
 @media only screen and (max-width: 600px) { 
     .register-box {
         width: 80vw;

@@ -1,4 +1,4 @@
-<div class="container-fluid register">
+<div class="container-fluid register pb-3">
     <div class="container-fluid border border-3 register-box p-3 d-flex justify-content-center">
         <form class="needs-validation" [formGroup]="regForm" (ngSubmit)="saveUser()">
             <div class="container-fluid d-flex justify-content-center p-3">
@@ -6,7 +6,7 @@
             </div>
             <div class="mb-3">
                 <label for="f-name" class="form-label">First name</label>
-                <input type="text" class="form-control" formControlName="firstName" id="f-name" [ngClass]="{ 'is-invalid': (regForm.controls.firstName.touched && regForm.controls.firstName.errors)
+                <input type="text" class="form-control" formControlName="firstName" id="f-name" [ngClass]="{ 'is-invalid': (regForm.controls.firstName.touched && regForm.controls.firstName.errors), 'is-valid': (regForm.controls.firstName.touched && !regForm.controls.firstName.errors)
                 }" required>
                 <div class="valid-feedback">
                     Looks good!
@@ -17,7 +17,7 @@
             </div>
             <div class="mb-3">
                 <label for="l-name" class="form-label">Last name</label>
-                <input type="text" class="form-control" formControlName="lastName" id="l-name" [ngClass]="{ 'is-invalid': (regForm.controls.lastName.touched && regForm.controls.lastName.errors)
+                <input type="text" class="form-control" formControlName="lastName" id="l-name" [ngClass]="{ 'is-invalid': (regForm.controls.lastName.touched && regForm.controls.lastName.errors), 'is-valid': (regForm.controls.lastName.touched && !regForm.controls.lastName.errors)
             }" required>
                 <div class="valid-feedback">
                     Looks good!
@@ -29,7 +29,7 @@
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" class="form-control" formControlName="email" id="email" aria-describedby="emailHelp"
-                    [ngClass]="{ 'is-invalid': (regForm.controls.email.touched && regForm.controls.email.errors)
+                    [ngClass]="{ 'is-invalid': (regForm.controls.email.touched && regForm.controls.email.errors), 'is-valid': (regForm.controls.email.touched && !regForm.controls.email.errors)
             }" required>
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 <div class="valid-feedback">
@@ -41,7 +41,7 @@
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" formControlName="password" id="password" [ngClass]="{ 'is-invalid': (regForm.controls.password.touched && regForm.controls.password.errors)
+                <input type="password" class="form-control" formControlName="password" id="password" [ngClass]="{ 'is-invalid': (regForm.controls.password.touched && regForm.controls.password.errors), 'is-valid': (regForm.controls.password.touched && !regForm.controls.password.errors)
             }" required>
                 <div class="container-fluid"
                     *ngIf="regForm.controls.password.touched && regForm.controls.password.errors">
@@ -60,7 +60,7 @@
             </div>
             <div class="container-fluid d-flex justify-content-center">
                 <button type="submit" [ngClass]="{'disabled': regForm.status === 'INVALID'}" class="btn btn-primary"
-                    id="submit-btn">Submit</button>
+                    id="submit-btn">Register</button>
             </div>
         </form>
     </div>
@@ -78,5 +78,11 @@
         <div>
             Wellcome {{f_Name}} {{l_Name}}!
         </div>
+    </div>
+    <div class="container-fluid d-flex justify-content-center home-b mt-2" (click)="getHome()">
+        &#8592; Back to home
+    </div>
+    <div class="container-fluid d-flex justify-content-center login-b mt-2" (click)="backToLogin()">
+        &#8592; Back to login
     </div>
 </div>

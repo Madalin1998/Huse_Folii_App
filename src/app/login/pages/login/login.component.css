@@ -7,3 +7,15 @@
     border-radius: 15px;
     width: fit-content;
 }
+
+.home-b {
+    cursor: pointer;
+}
+
+/* form {
+    width: 20vw;
+} */
+
+.home-b:hover {
+    color: cornflowerblue;
+}

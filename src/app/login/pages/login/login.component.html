@@ -1,27 +1,45 @@
 <div class="container-fluid login">
     <div class="container-fluid border border-3 login-box p-3 d-flex justify-content-center">
-        <form>
+        <form class="needs-validation" [formGroup]="logForm" (ngSubmit)="logUser()">
             <div class="container-fluid d-flex justify-content-center p-3">
                 <h3>Login</h3>
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" [ngClass]="{ 'is-invalid': (logForm.controls.email.touched && logForm.controls.email.errors), 'is-valid': (logForm.controls.email.touched && !logForm.controls.email.errors)
+            }" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a valid email.
+                </div>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" class="form-control" formControlName="pass" id="exampleInputPassword1" [ngClass]="{ 'is-invalid': (logForm.controls.pass.touched && logForm.controls.pass.errors), 'is-valid': (logForm.controls.pass.touched && !logForm.controls.pass.errors)
+            }" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a valid password.
+                </div>
             </div>
             <div class="container-fluid d-flex justify-content-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary"
+                    [ngClass]="{'disabled': logForm.status === 'INVALID'}">Login</button>
             </div>
         </form>
     </div>
     <div class="container-fluid d-flex justify-content-center mt-3">
-            <p class="pt-2">Don't have an account?</p>
-            <a>
-                <button class="btn btn-outline-primary ms-3" routerLink="../login/register">Register</button>
-            </a>
+        <p class="pt-2">Don't have an account?</p>
+        <a>
+            <button class="btn btn-outline-primary ms-3" routerLink="../login/register">Register</button>
+        </a>
+    </div>
+    <div class="container-fluid d-flex justify-content-center home-b" (click)="backToHome()">
+        &#8592; Back to home
     </div>
 </div>

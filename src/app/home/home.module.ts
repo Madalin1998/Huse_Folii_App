@@ -4,6 +4,9 @@ import { HomeComponent } from './home.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { HomeRoutingModule } from './homepage-routing.module';
+import { ProdDetailComponent } from './pages/prod-detail/prod-detail.component';
+import { SidePanelComponent } from './pages/side-panel/side-panel.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 
 
 
@@ -11,7 +14,10 @@ import { HomeRoutingModule } from './homepage-routing.module';
   declarations: [
     HomeComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProdDetailComponent,
+    SidePanelComponent,
+    HomepageComponent
   ],
   imports: [
     CommonModule,
