@@ -1,5 +1,8 @@
 <div class="container-fluid content d-flex justify-content-center">
-    <div class="card mx-4 mt-5" *ngFor="let n of [0,1,2,3,4,5,6]" (click)="goToProd()">
+    <div class="container-fluid">
+        <img src="../../../../assets/media/banner.jpg" class="img-fluid" alt="...">
+    </div>
+    <div class="card mx-4 mt-5" *ngFor="let n of [0,1,2,3,4,5,6]; let i=index" (click)="goToProd()" [attr.data-index]="i">
         <div class="container-fluid d-flex justify-content-center">
             <img class="card-img-top" src="../../../../assets/media/download.jpeg" alt="Card image">
         </div>

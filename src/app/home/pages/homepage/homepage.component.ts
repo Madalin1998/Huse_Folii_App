@@ -14,8 +14,11 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public item = document.getElementById("0");
+
   goToProd () {
     this.router.navigate(['home/details']);
+    console.log(this.item);
   }
 
 }

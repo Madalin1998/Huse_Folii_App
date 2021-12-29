@@ -12,10 +12,12 @@
     cursor: pointer;
 }
 
-/* form {
-    width: 20vw;
-} */
-
 .home-b:hover {
     color: cornflowerblue;
+}
+
+@media only screen and (min-width: 1200px) { 
+    form {
+        width: 17vw;
+    }
 }

@@ -1,9 +1,0 @@
-.accordion {
-    min-height: 84.3vh;
-}
-
-@media only screen and (max-width: 991px) {
-    .side-panel {
-        display: none;
-    }
-}

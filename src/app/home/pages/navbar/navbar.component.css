@@ -1,4 +1,32 @@
 .navbar {
     color: orange;
     z-index: 100;
+    background-color: #e9e8e8;
+}
+
+.nav-link {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 991px) {
+    .logo {
+        height: 5vh;
+        width: 25vw;
+        margin-left: 35vw;
+    }    
+}
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        height: 5vh;
+        width: 35vw;
+        margin-left: 30vw;
+    }    
+}
+
+@media only screen and (min-width: 991px) {
+    .logo {
+        height: 5vh;
+        width: 10vw;
+    }    
 }
