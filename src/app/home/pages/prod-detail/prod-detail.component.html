@@ -1,7 +1,7 @@
 <div class="container-fluid w-100 h-100">
     <div class="row">
-        <div class="col-sm-8 d-flex justify-content-center pt-5 pb-3">
-            <div id="carouselExampleIndicators" class="carousel slide w-50" data-bs-ride="carousel">
+        <div class="col-xl-8 d-flex justify-content-center pt-5 pb-3">
+            <div id="carouselExampleIndicators" class="carousel slide w-75" data-bs-interval="false">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -13,20 +13,26 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="container-fluid d-flex justify-content-center">
-                            <img src="../../../../assets/media/download.jpeg" class="d-block carousel-img"
-                                alt="product image">
+                            <a data-bs-toggle="modal" href="#exampleModal" role="button">
+                                <img src="../../../../assets/media/a51.jpg" class="d-block img-fluid"
+                                    alt="product image">
+                            </a>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="container-fluid d-flex justify-content-center">
-                            <img src="../../../../assets/media/download.jpeg" class="d-block carousel-img"
-                                alt="product image">
+                            <a data-bs-toggle="modal" href="#exampleModal" role="button">
+                                <img src="../../../../assets/media/a51.jpg" class="d-block img-fluid"
+                                    alt="product image">
+                            </a>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="container-fluid d-flex justify-content-center">
-                            <img src="../../../../assets/media/download.jpeg" class="d-block carousel-img"
-                                alt="product image">
+                            <a data-bs-toggle="modal" href="#exampleModal" role="button">
+                                <img src="../../../../assets/media/a51.jpg" class="d-block img-fluid"
+                                    alt="product image">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -42,7 +48,29 @@
                 </button>
             </div>
         </div>
-        <div class="col-sm-4 pt-5">col-4</div>
+        <div class="col-xl-4 pt-5">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <div class="container-fluid d-flex justify-content-center">
+                    <h5 class="text-decoration-line-through text-muted fst-normal">Pret vechi: 60 lei</h5>
+                </div>
+                <div class="container-fluid d-flex justify-content-start">
+                    <h3 class="text-danger">Pret: 50 lei</h3>
+                </div>
+                <div class="container-fluid d-flex justify-content-start mb-4">
+                    <span class="badge bg-success">In stoc</span>
+                </div>
+                <button class="btn btn-primary" type="button">Adauga in cos</button>
+                <button class="btn btn-outline-primary" type="button">Adauga la favorite</button>
+                <ul class="mt-3">
+                    <li class="list-text">Livrare rapida pe tot teritoriul Romaniei, 24 - 72 ore.</li>
+                    <li class="list-text">Costul livrarii este de 15 lei pentru produse in valoare de pana la 60 lei, in rest fiind gratuita.</li>
+                    <li class="list-text">Garantie inclusa de 6 luni.</li>
+                    <li class="list-text">Posibilitate de retur in 14 zile lucratoare.</li>
+                </ul>
+                <div class="container-fluid">
+                </div>
+            </div>
+        </div>
         <div class="col-sm-12 pt-3 border-top p-0 m-0">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -87,23 +115,74 @@
         <div class="col-sm-12 border-top">
             <div class="container-fluid d-flex justify-content-center">
                 <div class="card mx-2 my-2" style="width: 12rem;">
-                    <img src="../../../../assets/media/download.jpeg" class="card-img-top" alt="...">
+                    <img src="../../../../assets/media/a51.jpg" class="card-img-top" alt="...">
                     <div class="card-body d-flex justify-content-center">
-                      <p class="card-text">Iphone X</p>
+                        <p class="card-text">Iphone X</p>
                     </div>
-                  </div>
-                  <div class="card mx-2 my-2" style="width: 12rem;">
-                    <img src="../../../../assets/media/download.jpeg" class="card-img-top" alt="...">
+                </div>
+                <div class="card mx-2 my-2" style="width: 12rem;">
+                    <img src="../../../../assets/media/a51.jpg" class="card-img-top" alt="...">
                     <div class="card-body d-flex justify-content-center">
-                      <p class="card-text">Iphone X</p>
+                        <p class="card-text">Iphone X</p>
                     </div>
-                  </div>
-                  <div class="card mx-2 my-2" style="width: 12rem;">
-                    <img src="../../../../assets/media/download.jpeg" class="card-img-top" alt="...">
+                </div>
+                <div class="card mx-2 my-2" style="width: 12rem;">
+                    <img src="../../../../assets/media/a51.jpg" class="card-img-top" alt="...">
                     <div class="card-body d-flex justify-content-center">
-                      <p class="card-text">Iphone X</p>
+                        <p class="card-text">Iphone X</p>
                     </div>
-                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <div id="carouselExampleIndicators1" class="carousel slide" data-bs-interval="false">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid d-flex justify-content-center">
+                                    <img src="../../../../assets/media/a51.jpg" class="d-block img-fluid"
+                                        alt="product image">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid d-flex justify-content-center">
+                                    <img src="../../../../assets/media/a51.jpg" class="d-block img-fluid"
+                                        alt="product image">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid d-flex justify-content-center">
+                                    <img src="../../../../assets/media/a51.jpg" class="d-block img-fluid"
+                                        alt="product image">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

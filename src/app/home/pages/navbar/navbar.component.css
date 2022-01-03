@@ -1,7 +1,7 @@
 .navbar {
-    color: orange;
+    /* color: orange; */
     z-index: 100;
-    background-color: #e9e8e8;
+    background-color: #eeeeee;
 }
 
 .nav-link {
