@@ -3,29 +3,87 @@
     <a class="navbar-brand" routerLink="/">
       <img src="../../../../assets/media/logo.jpeg" alt="logo" class="logo">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link text-secondary" href="#">Noutati</a>
+        <li class="nav-item active">
+          <a class="nav-link text-secondary fs-5" href="#">Noutati</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-secondary" href="#">Accesorii GSM</a>
+          <a class="nav-link text-secondary fs-5" href="#">Accesorii GSM</a>
         </li>
       </ul>
       <form class="d-flex">
-        <div class="me-4">
-          <img src="https://img.icons8.com/ios/30/000000/shopping-cart.png"/>
+        <div class="d-flex me-2 cart" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <div class="container d-inline p-0">
+            <img src="https://img.icons8.com/ios/30/000000/shopping-cart.png" class="float-end p-0" />
+          </div>
+          <div class="container d-inline pt-1">
+            <small class="cos float-start">Cosul meu</small>
+          </div>
         </div>
-        <div class="me-4">
-          <img src="https://img.icons8.com/ios/30/000000/like--v1.png"/>
+        <div class="d-flex me-2 favorite" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+          <div class="container d-inline p-0">
+            <img src="https://img.icons8.com/ios/30/000000/like--v1.png" class="float-end p-0" />
+          </div>
+          <div class="container d-inline pt-1">
+            <small class="cos float-start">Favorite</small>
+          </div>
         </div>
-        <input class="form-control me-2 btn-outline-secondary" type="search" placeholder="Husa iphone X" aria-label="Search">
+        <input class="form-control me-2 btn-outline-secondary" type="search" placeholder="Husa iphone X"
+          aria-label="Search">
         <button class="btn btn-outline-secondary" type="submit">Cauta</button>
         <a routerLink="../login"><button class="btn btn-outline-secondary ms-4">Login/Register</button></a>
       </form>
     </div>
   </div>
 </nav>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cos de cumparaturi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>product 1</li>
+          <li>product 2</li>
+          <li>product 3</li>
+          <p>...</p>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Inchide</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink="cos">Vezi cosul de
+          cumparaturi</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Produse favorite</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>product 1</li>
+          <li>product 2</li>
+          <li>product 3</li>
+          <p>...</p>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Inchide</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink="favorite">Vezi produsele
+          favorite</button>
+      </div>
+    </div>
+  </div>
+</div>

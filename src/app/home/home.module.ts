@@ -6,6 +6,9 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { HomeRoutingModule } from './homepage-routing.module';
 import { ProdDetailComponent } from './pages/prod-detail/prod-detail.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { CosComponent } from './pages/cos/cos.component';
+import { FavoriteComponent } from './pages/favorite/favorite.component';
+import { BreadcrumbComponent } from './pages/breadcrumb/breadcrumb.component';
 
 
 
@@ -15,7 +18,10 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
     FooterComponent,
     NavbarComponent,
     ProdDetailComponent,
-    HomepageComponent
+    HomepageComponent,
+    CosComponent,
+    FavoriteComponent,
+    BreadcrumbComponent
   ],
   imports: [
     CommonModule,

@@ -8,6 +8,18 @@
     font-size: 18px;
 }
 
+.cart {
+    cursor: pointer;
+}
+
+.favorite {
+    cursor: pointer;
+}
+
+.cos {
+    white-space: nowrap;
+}
+
 @media only screen and (max-width: 991px) {
     .logo {
         height: 5vh;
