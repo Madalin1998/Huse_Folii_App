@@ -9,7 +9,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link text-secondary fs-5" href="#">Noutati</a>
         </li>
         <li class="nav-item">
@@ -58,7 +58,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Inchide</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink="cos">Vezi cosul de
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="goToCos()">Vezi cosul de
           cumparaturi</button>
       </div>
     </div>
@@ -81,7 +81,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Inchide</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" routerLink="favorite">Vezi produsele
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="goToFavorite()">Vezi produsele
           favorite</button>
       </div>
     </div>

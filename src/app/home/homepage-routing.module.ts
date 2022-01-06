@@ -9,26 +9,10 @@ import { ProdDetailComponent } from './pages/prod-detail/prod-detail.component';
 const homepage_routes: Routes = [
   {
     path: '', component: HomeComponent, children: [
-      { path: '', component: HomepageComponent,
-        data: {
-          location: 'Home'
-        } 
-      },
-      { path: 'details', component: ProdDetailComponent,
-        data: {
-          location: 'Product details'
-        }
-      },
-      { path: 'cos', component: CosComponent,
-        data: {
-          location: 'Cos'
-        }
-      },
-      { path: 'favorite', component: FavoriteComponent,
-        data: {
-          location: 'Favorite'
-        }
-      }
+      { path: '', component: HomepageComponent },
+      { path: 'details', component: ProdDetailComponent },
+      { path: 'cos', component: CosComponent },
+      { path: 'favorite', component: FavoriteComponent }
     ]
   }
 ];

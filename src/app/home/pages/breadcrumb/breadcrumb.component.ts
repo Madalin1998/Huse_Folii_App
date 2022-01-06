@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import {Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -8,10 +8,15 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 })
 export class BreadcrumbComponent implements OnInit {
 
+  public locations = Array();
+
   constructor(private activatedroute: ActivatedRoute, private router: Router) {
   }
 
-  ngOnInit(): void {
-}
+  ngOnInit() {
+    this.activatedroute.queryParams.subscribe(params => {
+      this.locations[0] = params["location"];
+    })
+  }
 
 }
