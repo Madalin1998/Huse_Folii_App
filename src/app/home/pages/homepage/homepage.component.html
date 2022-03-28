@@ -1,15 +1,28 @@
 <div class="container-fluid content d-flex justify-content-center mb-4">
-    <div class="container-fluid">
-        <img src="../../../../assets/media/banner.jpg" class="img-fluid" alt="...">
+  <div class="container-fluid">
+    <img
+      src="../../../../assets/media/banner.jpg"
+      class="img-fluid"
+      alt="..."
+    />
+  </div>
+  <div
+    class="card mx-4 mt-5 h-auto"
+    *ngFor="let n of [0, 1, 2, 3, 4, 5, 6]; let i = index"
+    (click)="goToProd()"
+    [attr.data-index]="i"
+  >
+    <div class="container-fluid d-flex justify-content-center">
+      <img
+        class="card-img-top"
+        src="../../../../assets/media/download.jpeg"
+        alt="Card image"
+      />
     </div>
-    <div class="card mx-4 mt-5 h-auto" *ngFor="let n of [0,1,2,3,4,5,6]; let i=index" (click)="goToProd()" [attr.data-index]="i">
-        <div class="container-fluid d-flex justify-content-center">
-            <img class="card-img-top" src="../../../../assets/media/download.jpeg" alt="Card image">
-        </div>
-        <div class="card-body">
-            <h4 class="card-title">Husa Iphone X {{n}}</h4>
-            <p class="card-text">Cea mai buna calitate de pe piata</p>
-            <h5 class="text-danger d-flex justify-content-center">Pret: 25 lei</h5>
-        </div>
+    <div class="card-body">
+      <h4 class="card-title">Husa Iphone X {{ n }}</h4>
+      <p class="card-text">Cea mai buna calitate de pe piata</p>
+      <h5 class="text-danger d-flex justify-content-center">Pret: 25 lei</h5>
     </div>
+  </div>
 </div>
